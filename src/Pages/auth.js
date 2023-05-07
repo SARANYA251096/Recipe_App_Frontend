@@ -24,10 +24,13 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const result = await axios.post("http://localhost:4000/auth/login", {
-        username,
-        password,
-      });
+      const result = await axios.post(
+        `${process.env.REACT_APP_BASE_URL}/auth/login`,
+        {
+          username,
+          password,
+        }
+      );
 
       setCookies("access_token", result.data.token);
       window.localStorage.setItem("userID", result.data.userID);
@@ -75,7 +78,7 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:4000/auth/register", {
+      await axios.post(`${process.env.REACT_APP_BASE_URL}/auth/register`, {
         username,
         password,
       });
