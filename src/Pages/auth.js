@@ -25,7 +25,7 @@ const Login = () => {
 
     try {
       const result = await axios.post(
-        `${process.env.REACT_APP_BASE_URL}/auth/login`,
+        `${process.env.REACT_APP_BASE_URL}auth/login`,
         {
           username,
           password,
@@ -78,7 +78,7 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_BASE_URL}/auth/register`, {
+      await axios.post(`${process.env.REACT_APP_BASE_URL}auth/register`, {
         username,
         password,
       });
