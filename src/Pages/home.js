@@ -55,23 +55,27 @@ export const Home = () => {
   return (
     <div>
       <h1>Recipes</h1>
-      <ul>
+      <ul style={{ display: "flex", flexWrap: "wrap" }}>
         {recipes.map((recipe) => (
-          <li key={recipe._id}>
-            <div>
-              <h2>{recipe.name}</h2>
-              <p>{ recipe.description}</p>
-              <button
-                onClick={() => saveRecipe(recipe._id)}
-                disabled={isRecipeSaved(recipe._id)}
-              >
-                {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
-              </button>
+          <li key={recipe._id} style={{ width: "50%" }}>
+            <div style={{ display: "flex" }}>
+              <div style={{ flex: 1 }}>
+                <h2>{recipe.name}</h2>
+                <p>{recipe.description}</p>
+                <button
+                  onClick={() => saveRecipe(recipe._id)}
+                  disabled={isRecipeSaved(recipe._id)}
+                >
+                  {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
+                </button>
+              </div>
+              <div style={{ flex: 1 }}>
+                <img src={recipe.imageUrl} alt={recipe.name} />
+              </div>
             </div>
             <div className="instructions">
               <p>{recipe.instructions}</p>
             </div>
-            <img src={recipe.imageUrl} alt={recipe.name} />
             <p>Cooking Time: {recipe.cookingTime} minutes</p>
           </li>
         ))}
