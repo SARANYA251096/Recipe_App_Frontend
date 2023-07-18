@@ -55,9 +55,9 @@ export const Home = () => {
   return (
     <div>
       <h1>Recipes</h1>
-      <ul style={{ display: "flex", flexWrap: "wrap" }}>
+      <ul style={{ display: "flex",flexWrap:"wrap",margin:"30px",padding:"20px",width:"450px"}} className="recipe">
         {recipes.map((recipe) => (
-          <li key={recipe._id} style={{ width: "40%", margin: "10px" }}>
+          <li key={recipe._id} style={{ width: "100%", margin: "10px" }}>
             <div style={{ display: "flex" }}>
               <div style={{ flex: 1 }}>
                 <h2>{recipe.name}</h2>

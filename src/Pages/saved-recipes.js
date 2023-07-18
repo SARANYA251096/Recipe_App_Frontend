@@ -21,7 +21,7 @@ export const SavedRecipes = () => {
     fetchSavedRecipes();
   }, []);
   return (
-    <div>
+    <div className="recipe">
       <h1>Saved Recipes</h1>
       <ul>
         {savedRecipes.map((recipe) => (
