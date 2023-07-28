@@ -59,7 +59,7 @@ input {
 
 .navbar {
   margin: 0;
-  width: 100%;
+  width: 150%;
   height: 80px;
   background-color: black;
   display: flex;
@@ -67,8 +67,13 @@ input {
   align-items: center;
   color: white;
   text-decoration: none;
+  margin-right: 330px !important;
 }
-
+.recipess{
+  /* width: fit-content; */
+  align-items: center;
+  justify-content: center;
+}
 a {
   color: white;
   text-decoration: none;
@@ -121,4 +126,105 @@ img {
 p {
   max-width: 400px;
   font-size: 12px;
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 2142px) {
+  .navbar {
+    margin-right: 1000px;
+  }
+  .recipess {
+    margin-right: 1000px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .navbar {
+    margin-left: 400px;
+  }
+  .recipess {
+    margin-left: 300px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .navbar {
+    margin-left: 450px;
+    width: auto;
+  }
+  .recipess {
+    margin-left: auto;
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .navbar {
+    margin-left: 450px;
+    width: auto;
+  }
+  .recipess {
+    margin-right: 450px;
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .navbar {
+    margin-left: 600px;
+    width: auto;
+  }
+  .recipess {
+    margin: auto;
+    margin-right: 500px;
+    width: auto !important;
+  }
+}
+
+/* Adjust styles for smaller devices */
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin: 0;
+  }
+  .recipess {
+    margin: 0;
+  }
+
+  .auth {
+    flex-direction: column; /* Change to column for smaller screens */
+    justify-content: center; /* Center the forms vertically */
+  }
+
+  .auth-container,
+  .create-recipe {
+    width: 90%;
+    margin: 10px auto; /* Center the forms horizontally */
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+/* Adjust styles for even smaller devices */
+@media screen and (max-width: 480px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  a {
+    margin: 5px;
+    font-size: 18px;
+  }
+
+  .auth-container,
+  .create-recipe {
+    width: 100%;
+  }
 }

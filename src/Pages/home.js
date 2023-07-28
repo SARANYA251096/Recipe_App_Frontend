@@ -53,8 +53,8 @@ export const Home = () => {
   const isRecipeSaved = (id) => savedRecipes.includes(id);
 
   return (
-    <div>
-      <h1>Recipes</h1>
+    <div className="recipess">
+      <h1 style={{color:"white"}}>Recipes</h1>
       <ul style={{ display: "flex",flexWrap:"wrap",margin:"30px",padding:"20px",width:"450px"}} className="recipe">
         {recipes.map((recipe) => (
           <li key={recipe._id} style={{ width: "100%", margin: "10px" }}>
